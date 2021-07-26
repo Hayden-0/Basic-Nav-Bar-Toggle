@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Nav */
+
+.nav-bar {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    padding: 18px 0 20px 20px;
+}
+
+.links {
+    display: flex;
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    color: #BB85FC;
+}
+
+.links li {
+    padding: 10px 18px 10px 18px;
+    font-size: 20px;
+}
+/* Hiding our toggle button orignally for desktop displays */
+.button {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 973px) {
+    .nav-bar {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .links {
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        height: 0px;
+        overflow: hidden;
+        transition: 1.5s;
+    }
+
+    .toggle-button {
+        height: 188px;
+    }
+
+    .nav-logo {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 0 20px 20px;
+        height: fit-content
+    }
+    /* Display the toggle button on social icon remove */
+    .button {
+        display: initial;
+        font-size: 25px;
+        margin: 15px 30px 15px 0px;
+        transform: rotate(0deg);
+        transition: 1s;
+        visibility: visible;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        transform: rotate(90deg);
+        transition: 1s;
+    }
+}
+
+/* Icons */
+
+.social-icons {
+    padding: 10px 18px 10px 18px;
+}
+
+.social-icons i {
+    padding: 5px;
+    font-size: 20px;
+    color: #69A1BF;
+}
+
+.social-icons i:hover {
+    color: #03D9C5;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+/* Removing social icons on width */
+@media (max-width: 973px) {
+    .social-icons {
+        display: none;
+    }
+}
