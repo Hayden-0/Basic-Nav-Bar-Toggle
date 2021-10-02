@@ -56,6 +56,8 @@ body {
     .nav-bar {
         flex-direction: column;
         height: fit-content;
+        /* Moz-max-content is the way firefox reads the orignal 'height: fit-content' property. */
+        height: -moz-max-content;
     }
 
     .links {
